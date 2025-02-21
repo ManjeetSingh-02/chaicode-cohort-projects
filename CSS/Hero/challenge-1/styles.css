@@ -9,7 +9,7 @@ body {
     Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: white;
-  background-color: #0a0a0a;
+  background-color: #000000;
 }
 
 .hero {
@@ -18,36 +18,81 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #140E1F;
+  width: 80%;
+  margin: auto;
 }
 
-.announcement {}
+.announcement {
+  margin: 40px 0;
+}
 
 .announcement-link {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  gap: 10px;
   color: white;
-  background-color: grey;
-  padding: 10px;
-  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #302B38;
+  padding: 10px 20px;
+  border-radius: 50px;
 }
 
-.announcement-link:hover {}
+.announcement-link:hover {
+  background-color: #302B38;
+}
 
-.announcement-text {}
+.announcement-text {
+  font-size: 1.5rem;
+}
 
-.announcement-button {}
+.announcement-button {
+  background-color: #363140;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
 
-.hero-content {}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  text-align: center;
+}
 
-.hero-title {}
+.hero-title {
+  font-size: 4rem;
+  color: #DDDDDD;
+}
 
-.hero-description {}
+.hero-description {
+  font-size: 1.5rem;
+  color: #B7B7B9;
+  width: 80%;
+}
 
-.cta-button {}
+.cta-button {
+  background-color: #544CEB;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 40px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
 
-.cta-button:hover {}
+.cta-button:hover {
+  background-color: #6D68FF;
+}
 
 @media (max-width: 640px) {
   .hero {
