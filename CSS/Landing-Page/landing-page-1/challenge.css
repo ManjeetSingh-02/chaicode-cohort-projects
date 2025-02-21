@@ -3,73 +3,146 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #0E0E0E;
 }
 
 /* Basic styles */
 body {
   font-family: "Arial", sans-serif;
   line-height: 1.6;
+  width: 95%;
+  margin: auto;
+  height: 100vh;
+  background: url("./assets/chaigym.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Navbar styles */
 .navbar {
   /* Add styles for navbar */
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
 }
 
 .logo {
   /* Add styles for the logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  gap: 10px;
+  background: transparent;
 }
 
 .logo img {
   /* Add styles for logo image */
+  border-radius: 50%;
+}
+
+.nav-links {
+  background-color: transparent;
 }
 
 .nav-links a {
   /* Add styles for nav links */
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  margin: 0 10px;
+  font-size: 1.25rem;
 }
 
 .nav-links a:hover {
   /* Add hover styles for nav links */
+  color: #f1c40f;
 }
 
 /* Hero section styles */
 .hero {
   /* Add styles for hero section */
+  height: 90vh;
+  opacity: 0.7;
+  padding: 60px 0;
 }
 
 .hero-content {
   /* Add styles for hero content */
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .hero-content h1 {
   /* Add styles for hero heading */
+  font-weight: bold;
+  font-size: 4rem;
 }
 
 .hero-content p {
   /* Add styles for hero paragraph */
+  font-size: 1.5rem;
 }
 
 .cta-button {
   /* Add styles for CTA button */
+  background-color: #FF7902;
+  padding: 15px 25px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
 }
 
 .cta-button:hover {
   /* Add hover styles for CTA button */
+  background-color: #FFA500;
+  cursor: pointer;
 }
 
 /* Features section styles */
 .features {
   /* Add styles for features section */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  padding: 70px 0;
+  margin: 70px auto;
+  color: white;
+  background-color: #000000;
+  border-radius: 20px;
 }
 
 .feature {
   /* Add styles for each feature block */
+  border: 2px solid #FF7902;
+  border-radius: 10px;
+  text-align: center;
+  background-color: transparent;
+  padding: 20px 40px;
+  background: transparent;
 }
 
 .feature h3 {
   /* Add styles for feature heading */
+  font-weight: bold;
+  background: transparent;
+  font-size: 1.5rem;
+  color: #ff5100;
 }
 
 .feature p {
   /* Add styles for feature paragraph */
+  font-weight: bold;
+  background: transparent;
 }
