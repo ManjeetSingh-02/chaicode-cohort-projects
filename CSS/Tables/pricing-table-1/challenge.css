@@ -9,61 +9,114 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f5f5f5;
+  background-color: #000000;
 }
 
 .container {
   /* Add your styles here */
+  width: 99%;
+  margin: auto;
+  background-color: #f5f5f5;
+  height: 100vh;
+  padding: 30px 0;
 }
 
 h1 {
   /* Add your styles here */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pricing-heading {
   /* Add your styles here */
+  font-size: 3.25rem;
 }
 
 .pricing-container {
   /* Add your styles here */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 10px auto;
+  gap: 40px;
 }
 
 .pricing-card {
   /* Add your styles here */
+  background-color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 20px;
+  width: 60%;
 }
 
 .pricing-card:hover {
   /* Add your styles here */
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-card.popular {
   /* Add your styles here */
+  position: relative;
+  border: 2px solid #FF7800;
+  padding: 40px 0;
 }
 
 .popular-badge {
   /* Add your styles here */
+  position: absolute;
+  top: -3%;
+  padding: 10px 20px;
+  background-color: #FF7800;
+  border: none;
+  border-radius: 50px;
+  color: white;
 }
 
 .price {
   /* Add your styles here */
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .period {
   /* Add your styles here */
+  color: grey;
 }
 
 .features {
   /* Add your styles here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .features li {
   /* Add your styles here */
+  width: 75%;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 .subscribe-btn {
   /* Add your styles here */
+  padding: 15px 25px;
+  background-color: #FF9533;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.5rem;
 }
 
 .subscribe-btn:hover {
   /* Add your styles here */
+  cursor: pointer;
+  background-color: #FF7800;
 }
