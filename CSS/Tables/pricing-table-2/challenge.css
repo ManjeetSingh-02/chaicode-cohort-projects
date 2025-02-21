@@ -9,98 +9,190 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f5f5f5;
+  background-color: #0E0E0E;
 }
 
 .container {
   /* Add your styles here */
+  background-color: #1A1A1A;
+  margin: auto;
+  width: 75%;
+  padding: 20px;
+  height: 100vh;
 }
 
 .header {
   /* Add your styles here */
+  text-align: center;
 }
 
 h1 {
   /* Add your styles here */
+  color: #FF6B6B;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 .subtitle {
   /* Add your styles here */
+  color: #6E6E6E;
+  font-size: 1.5rem;
 }
 
 .pricing-container {
   /* Add your styles here */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 20px;
 }
 
 .pricing-card {
   /* Add your styles here */
+  background-color: #262626;
+  border: 1px solid #2E2E2E;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding: 30px 30px;
 }
 
 .pricing-card:hover {
   /* Add your styles here */
+  border: 1px solid #FF6B6B;
 }
 
 .card-header {
   /* Add your styles here */
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .icon {
   /* Add your styles here */
+  font-size: 2rem;
 }
 
 .popular-tag {
   /* Add your styles here */
+  color: black;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: yellow;
+  font-weight: bold;
+  position: absolute;
+  top: -18px;
 }
 
 .price-block {
   /* Add your styles here */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #303030;
+  padding: 15px 0;
+  width: 95%;
+  flex-direction: column;
+  border-radius: 10px;
 }
 
 .price {
+  color: #FF6B6B;
+  font-size: 2rem;
+  font-weight: bold;
   /* Add your styles here */
 }
 
 .period {
   /* Add your styles here */
+  color: #646464;
 }
 
 .features {
   /* Add your styles here */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin: 30px 20px;
+  gap: 30px;
 }
 
 .features li {
   /* Add your styles here */
+  list-style-type: none;
+  color: #BFBFBF;
 }
 
 .features li.disabled {
   /* Add your styles here */
+  color: #4B4B4B;
 }
 
 .join-btn {
   /* Add your styles here */
+  color: #FF6B6B;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #FF6B6B;
+  width: 95%;
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: bold;
 }
 
 .join-btn:hover {
   /* Add your styles here */
+  background-color: #FF6B6B;
+  color: #BFBFBF;
+  cursor: pointer;
 }
 
 /* Custom Class Modifiers */
 .warrior {
   /* Add your styles here */
+  background-color: #312222;
+  border: 1px solid #FF6B6B;
+  position: relative;
+}
+
+.warrior .price-block {
+  background-color: #3C2D2D;
 }
 
 .champion {
   /* Add your styles here */
+  background-color: #312D1D;
+  border: 2px solid #7D6D29;
+}
+
+.champion .price-block {
+  background-color: #3C3829;
 }
 
 .champion .price {
   /* Add your styles here */
+  color: #FFD93D;
 }
 
 .champion .join-btn {
   /* Add your styles here */
+  color: #FFD93D;
+  border: 2px solid #7D6D29;
 }
 
 .champion .join-btn:hover {
   /* Add your styles here */
+  background-color: #7D6D29;
+  color: #BFBFBF;
 }
