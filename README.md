@@ -9,9 +9,18 @@ List of all the challanges
 - CSS Challanges
 
   - Hero Section Challanges
+    - Minimal Hero Section
+    - Hero Section with Image
   - Tables Challanges
+    - Basic Pricing Table
+    - Premium Pricing Table
   - Landing Page Challanges
+    - Chai aur Fitness
+    - Chai aur Cohort
+    - ChaiPatti
 
 - DOM Manipulation JS Challanges
 
-  - Coming Soon
+  - Body Mass Index Calculator Challange
+  - Simple Calculator Challange
+  - Review Submit
