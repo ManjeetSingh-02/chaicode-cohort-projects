@@ -12,124 +12,118 @@
 }
 
 body {
+  position: relative;
+  width: 80%;
+  margin: auto;
 }
 
 .hero {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 150px;
 }
 
 .content-col h1 {
+  font-size: 5rem;
 }
 
 .content-col p {
+  font-size: 2rem;
 }
 
 .cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 10px;
 }
 
-.sr-only {
+label {
+  display: none;
 }
 
-.input-wrapper {
+input {
+  border: 2px solid #F3F4F5;
+  color: #F3F4F5;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 input[type='text'] {
+  color: var(--neutral-900);
 }
 
 .demo-button {
+  color: white;
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .demo-button:hover {
+  background-color: var(--primary-blue-dark);
+  cursor: pointer;
 }
 
 .brands-section {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 0;
+  gap: 20px;
 }
 
 .trusted-by {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .brand-logos {
-}
-
-.brand-logo {
-}
-
-.image-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .hero-image {
-}
-
-@media (min-width: 640px) {
-  .hero {
-  }
-
-  .content-col h1 {
-  }
-
-  .cta-group {
-  }
-
-  .demo-button {
-  }
-
-  .input-wrapper {
-  }
-
-  input[type='text'] {
-  }
-}
-
-@media (min-width: 768px) {
-  .content-col h1 {
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero {
-  }
-
-  .hero-grid {
-  }
-
-  .content-col h1 {
-  }
-
-  .cta-group {
-  }
-
-  .brands-section {
-  }
-
-  .image-col {
-  }
-}
-
-@media (min-width: 1280px) {
-  .hero-grid {
-    gap: 3rem;
-  }
+  border-radius: 10px;
+  border: none;
+  width: 45rem;
 }
 
 .dark-mode-toggle {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  color: white;
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .dark-mode-toggle:hover {
+  background-color: var(--primary-blue-dark);
+  cursor: pointer;
 }
 
 body.dark {
-}
-
-.dark-mode-toggle {
-}
-
-.dark-mode-toggle:hover {
-}
-
-input[type='text'].dark {
-}
-
-input[type='text']::placeholder {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
