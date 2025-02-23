@@ -26,7 +26,4 @@ ageInput.addEventListener("input", () => {
   else ageDisplay.textContent = ageInput.value;
 });
 
-bioInput.addEventListener("input", () => {
-  if (bioInput.value === "") bioDisplay.textContent = "Not Provided";
-  else bioDisplay.textContent = bioInput.value;
-});
+
