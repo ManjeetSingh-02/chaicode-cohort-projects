@@ -23,4 +23,14 @@ List of all the challanges
 
   - Body Mass Index Calculator Challange
   - Simple Calculator Challange
-  - Review Submit
+  - Review Submitter
+  - Light Bulb Toggle
+  - Change Text Color
+  - Real-time Form Input Display
+  - Task Management
+  - Image Carousel Application
+  - Enhanced Clock
+  - Accordion
+  - Simple Shopping Cart
+  - Sliding Menu
+  - Interactive Memory Card Game
