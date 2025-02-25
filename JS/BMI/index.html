@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI</title>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    coming soon...
+    <div class="bmi-calculator">
+        <h2>BMI Calculator</h2>
+        <input type="number" id="weight" placeholder="Enter weight (kg)">
+        <input type="number" id="height" placeholder="Enter height (cm)">
+        <button id="calculate" onclick="calculateBMI()">Calculate BMI</button>
+        <div class="result" id="bmi-result">Your BMI: </div>
+        <div class="bmi-range">
+            <h3>BMI Categories:</h3>
+            <p>Underweight: BMI &lt; 18.5</p>
+            <p>Normal weight: BMI 18.5–24.9</p>
+            <p>Overweight: BMI 25–29.9</p>
+            <p>Obesity: BMI ≥ 30</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
