@@ -45,6 +45,11 @@ body {
   gap: 10px;
 }
 
+.cart-item-info {
+  display: flex;
+  gap: 10px;
+}
+
 button {
   padding: 5px 10px;
   cursor: pointer;
