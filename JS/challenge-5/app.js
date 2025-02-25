@@ -27,11 +27,13 @@ let prevButton = document.getElementById("prevButton");
 let nextButton = document.getElementById("nextButton");
 let carouselNav = document.getElementById("carouselNav");
 let autoPlayButton = document.getElementById("autoPlayButton");
+let timerDisplay = document.getElementById("timerDisplay");
 
 let currentImageIndex = 0;
-let timer = 3;
 let autoPlay = false;
 let autoPlayInterval;
+let timer = 3;
+let time = timer;
 
 images.forEach((image, index) => {
   let slide = document.createElement("div");
@@ -74,7 +76,15 @@ function nextSlide() {
 function startAutoPlay() {
   autoPlayButton.textContent = "Stop Auto Play";
   autoPlay = true;
-  autoPlayInterval = setInterval(nextSlide, timer * 1000);
+  timerDisplay.textContent = time + "s";
+  autoPlayInterval = setInterval(() => {
+    time--;
+    timerDisplay.textContent = time + "s";
+    if (time < 1) {
+      time = timer + 1;
+      nextSlide();
+    }
+  }, 1000);
   prevButton.style.display = "none";
   nextButton.style.display = "none";
 }
@@ -83,6 +93,7 @@ function stopAutoPlay() {
   autoPlayButton.textContent = "Start Auto Play";
   autoPlay = false;
   clearInterval(autoPlayInterval);
+  timerDisplay.textContent = "";
   prevButton.style.display = "block";
   nextButton.style.display = "block";
 }
