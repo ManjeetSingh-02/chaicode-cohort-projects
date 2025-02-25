@@ -14,11 +14,12 @@ function setTime() {
   let hours = currentDate.getHours();
   let minutes = currentDate.getMinutes();
   let seconds = currentDate.getSeconds();
+  let miliseconds = currentDate.getMilliseconds();
+  let hourDeg = (hours % 12) * 30 + minutes * 0.5;
   let minuteDeg = minutes * 6;
   let secondDeg = seconds * 6;
 
   if (hours >= 12) period = "PM";
-  let hourDeg = (hours % 12) * 30 + minutes * 0.5;
   hours = hours % 12 || 12;
   hours = hours.toString().padStart(2, "0");
   minutes = minutes.toString().padStart(2, "0");
@@ -30,7 +31,8 @@ function setTime() {
 
   digitalClock.textContent = `${hours}:${minutes}:${seconds} ${period}`;
   date.textContent = currentDate.toDateString();
+
+  setTimeout(setTime, 1000 - miliseconds);
 }
 
 setTime();
-setInterval(setTime, 1000);
