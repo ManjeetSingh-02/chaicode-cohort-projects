@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-section {
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.right-section {
+    background: #fff;
+    overflow-y: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: auto;
+}
+
+input,
+textarea,
+button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.submitted-container {
+    padding: 20px;
+}
+
+.submitted-item {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #e3f2fd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-text {
+    font-style: italic;
+    margin-top: 5px;
+}

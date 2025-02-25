@@ -5,10 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Submitter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    coming soon...
+    <div class="left-section">
+        <h2>Submit a Review</h2>
+        <form>
+            <input id="username" type="text" placeholder="Enter you name" required>
+            <input id="userreview" type="text" placeholder="Enter your review" required>
+            <button id="submitreview" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="right-section">
+        <div id="submittedcontainer" class="submitted-container">
+            <h2>Submitted Reviews</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
