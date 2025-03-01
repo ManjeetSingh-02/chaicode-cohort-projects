@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.dropdown>button {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.dropdown-menu {
+    display: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropdown-menu button {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.custom {
+    background-color: transparent;
+}
+
+.reset {
+    background-color: transparent;
+}
+
+.color-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.color-box p {
+    width: 300px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}

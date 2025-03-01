@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change via Closure Function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="dropdown">
+            <button id="dropdownBtn">Open Dropdown Menu</button>
+            <div id="dropdownMenu" class="dropdown-menu">
+                <button onclick="changeColor(`red`)()" class="red">Red</button>
+                <button onclick="changeColor(`blue`)()" class="blue">Blue</button>
+                <button onclick="changeColor(`green`)()" class="green">Green</button>
+                <button onclick="changeColor(`custom`)()" class="custom">Custom</button>
+                <button onclick="changeColor()()" class="reset">Reset</button>
+            </div>
+        </div>
+        <div class="color-box">
+            <p>Change Box Color from Dropdown Menu</p>
+            <div id="colorBox" class="box"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
