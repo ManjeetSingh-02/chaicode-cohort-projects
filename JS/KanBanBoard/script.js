@@ -12,8 +12,13 @@ const container = document.querySelector(".container");
 
 changeTheme.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-  if (document.body.classList.contains("dark")) changeTheme.innerHTML = `<i class="fa-solid fa-sun"></i> <span>Light Mode</span>`;
-  else changeTheme.innerHTML = `<i class="fa-solid fa-moon"></i> <span>Dark Mode</span>`;
+  if (document.body.classList.contains("dark")) {
+    changeTheme.innerHTML = `<i class="fa-solid fa-sun"></i> <span>Light Mode</span>`;
+    localStorage.setItem("kanbanboard-theme", "dark");
+  } else {
+    changeTheme.innerHTML = `<i class="fa-solid fa-moon"></i> <span>Dark Mode</span>`;
+    localStorage.setItem("kanbanboard-theme", "light");
+  }
 });
 
 function togglePopup(popup, show) {
@@ -92,3 +97,13 @@ function addBoardFn(input, color) {
   div.appendChild(tasks);
   container.appendChild(div);
 }
+
+function loadTheme() {
+  if (!localStorage.getItem("kanbanboard-theme")) localStorage.setItem("kanbanboard-theme", "light");
+  if (localStorage.getItem("kanbanboard-theme") === "dark") {
+    document.body.classList.add("dark");
+    changeTheme.innerHTML = `<i class="fa-solid fa-sun"></i> <span>Light Mode</span>`;
+  }
+}
+
+loadTheme();
