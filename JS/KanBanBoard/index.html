@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KanBan Board</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/af5eb96df9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <h1>KanBan Board</h1>
+        <ul>
+            <li id="addTask">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add Task</span>
+            </li>
+            <li id="addBoard">
+                <i class="fa-solid fa-plus"></i>
+                <span>Add Board</span>
+            </li>
+            <li id="changeTheme">
+                <i class="fa-solid fa-moon"></i>
+                <span>Dark Mode</span>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div id="taskPopUp" class="popup">
+            <h2>Add Task</h2>
+            <div class="content">
+                <input id="taskInput" type="text" placeholder="Enter a Task Name">
+                <select name="color" id="taskColorSelector">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="orange">Orange</option>
+                </select>
+                <div class="popup-btns">
+                    <button id="cancelTaskBtn">Cancel</button>
+                    <button id="submitTaskBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="boardPopUp" class="popup">
+            <h2>Add Board</h2>
+            <div class="content">
+                <input id="boardInput" type="text" placeholder="Enter a Board Name">
+                <select name="color" id="boardColorSelector">
+                    <option value="blue">Blue</option>
+                    <option value="orange">Orange</option>
+                </select>
+                <div class="popup-btns">
+                    <button id="cancelBoardBtn">Cancel</button>
+                    <button id="submitBoardBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="todoBoard" class="board">
+                <h2>Todo</h2>
+                <div class="tasks"></div>
+            </div>
+            <div id="progressBoard" class="board">
+                <h2>In Progress</h2>
+                <div class="tasks"></div>
+            </div>
+            <div id="completedBoard" class="board">
+                <h2>Completed</h2>
+                <div class="tasks"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
