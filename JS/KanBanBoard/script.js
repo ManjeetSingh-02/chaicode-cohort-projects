@@ -16,47 +16,35 @@ changeTheme.addEventListener("click", () => {
   else changeTheme.innerHTML = `<i class="fa-solid fa-moon"></i> <span>Dark Mode</span>`;
 });
 
-addTask.addEventListener("click", () => {
-  taskPopUp.style.display = "flex";
-  container.style.opacity = 0.5;
-});
+function togglePopup(popup, show) {
+  popup.style.display = show ? "flex" : "none";
+  container.style.opacity = show ? 0.5 : 1;
+}
 
-cancelTaskBtn.addEventListener("click", () => {
-  taskPopUp.style.display = "none";
-  container.style.opacity = 1;
-});
-
+addTask.addEventListener("click", () => togglePopup(taskPopUp, true));
+cancelTaskBtn.addEventListener("click", () => togglePopup(taskPopUp, false));
 submitTaskBtn.addEventListener("click", () => {
   const taskInput = document.getElementById("taskInput");
   const taskColorSelector = document.getElementById("taskColorSelector");
 
-  if (taskInput.value === "") alert("Please enter a task");
+  if (taskInput.value.trim() === "") alert("Please enter a task");
   else addTaskFn(taskInput.value.trim(), taskColorSelector.value);
 
-  taskPopUp.style.display = "none";
   taskInput.value = "";
-  container.style.opacity = 1;
+  togglePopup(taskPopUp, false);
 });
 
-addBoard.addEventListener("click", () => {
-  boardPopUp.style.display = "flex";
-  container.style.opacity = 0.5;
-});
-
-cancelBoardBtn.addEventListener("click", () => {
-  boardPopUp.style.display = "none";
-  container.style.opacity = 1;
-});
-
+addBoard.addEventListener("click", () => togglePopup(boardPopUp, true));
+cancelBoardBtn.addEventListener("click", () => togglePopup(boardPopUp, false));
 submitBoardBtn.addEventListener("click", () => {
   const boardInput = document.getElementById("boardInput");
   const boardColorSelector = document.getElementById("boardColorSelector");
-  if (boardInput.value === "") alert("Please enter a board name");
+
+  if (boardInput.value.trim() === "") alert("Please enter a board name");
   else addBoardFn(boardInput.value.trim(), boardColorSelector.value);
 
-  boardPopUp.style.display = "none";
   boardInput.value = "";
-  container.style.opacity = 1;
+  togglePopup(boardPopUp, false);
 });
 
 function addTaskFn(input, color) {
@@ -86,7 +74,7 @@ function addTaskFn(input, color) {
 
   div.appendChild(p);
   div.appendChild(actions);
-  todoBoard.appendChild(div);
+  todoBoard.querySelector(".tasks").appendChild(div);
 }
 
 function addBoardFn(input, color) {
