@@ -21,16 +21,21 @@ List of all the challanges
 
 - DOM Manipulation JS Challanges
 
-  - Body Mass Index Calculator Challange
-  - Simple Calculator Challange
-  - Review Submitter
-  - Light Bulb Toggle
-  - Change Text Color
-  - Real-time Form Input Display
-  - Task Management
-  - Image Carousel Application
-  - Enhanced Clock
-  - Accordion
-  - Simple Shopping Cart
-  - Sliding Menu
-  - Interactive Memory Card Game
+  - DOM Live Class
+    - Body Mass Index Calculator Challange
+    - Simple Calculator Challange
+    - Review Submitter
+    - Change Color via Closure
+    - KanBan Board
+  - DOM Part 1
+    - Light Bulb Toggle
+    - Change Text Color
+    - Real-time Form Input Display
+    - Task Management
+    - Image Carousel Application
+  - DOM Part 2
+    - Enhanced Clock
+    - Accordion
+    - Simple Shopping Cart
+    - Sliding Menu
+    - Interactive Memory Card Game
