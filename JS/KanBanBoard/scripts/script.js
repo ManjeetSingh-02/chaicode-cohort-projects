@@ -2,6 +2,7 @@ import { changeTheme, checkTheme, changeThemeMode } from "./themeFns.js";
 import { createErrorMsg } from "./errMsgFn.js";
 import { togglePopup, openTaskPopup, closeTaskPopup, closeEditPopup } from "./popupFns.js";
 import { saveTasks, checkTasks, addTask, updateBoardCount, finishedTasks, ongoingTasks, pendingTasks } from "./tasksFns.js";
+import { getDate } from "./utilsFns.js";
 
 const taskSubmitBtn = document.getElementById("taskSubmitBtn");
 const taskEditBtn = document.getElementById("taskEditBtn");
@@ -17,12 +18,15 @@ closeEditPopup.addEventListener("click", () => togglePopup("editPopup", false));
 taskSubmitBtn.addEventListener("click", () => {
   if (!taskNameInput.value || taskNameInput.value.trim() === "") createErrorMsg("Task name is required");
   else {
-    addTask(taskNameInput.value.trim(), "pending");
     const taskObj = {
       taskId: Date.now(),
       taskName: taskNameInput.value.trim(),
       taskType: "pending",
+      taskTimenDate: {
+        createdAt: getDate(),
+      },
     };
+    addTask(taskNameInput.value.trim(), "pending", taskObj.taskTimenDate);
     pendingTasks.push(taskObj);
     saveTasks("kbc-pending-tasks", pendingTasks);
     updateBoardCount("pending");

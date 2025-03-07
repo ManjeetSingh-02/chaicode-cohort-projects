@@ -1,4 +1,4 @@
-import { getDate, getImage } from "./utilsFns.js";
+import { getImage } from "./utilsFns.js";
 import { togglePopup } from "./popupFns.js";
 
 const pendingTasksDiv = document.getElementById("pendingTasksDiv");
@@ -41,20 +41,44 @@ function saveTasks(key, tasks) {
 }
 
 function loadTask(task) {
-  addTask(task.taskName, task.taskType);
+  addTask(task.taskName, task.taskType, task.taskTimenDate);
   updateBoardCount(task.taskType);
 }
 
-function addTask(taskName, taskType) {
+function addTask(taskName, taskType, taskTimenDate) {
   const mainDiv = document.createElement("div");
   mainDiv.classList.add("border-2", "w-full", "rounded-lg", "p-4", "font-bold", "flex", "flex-col", "items-center", "justify-center", "gap-4");
 
   const timeDiv = document.createElement("div");
   timeDiv.classList.add("border-b-2", "border-gray-500", "w-full", "text-center", "flex", "flex-col", "items-center", "justify-center", "gap-1", "pb-1");
-  const currentDate = document.createElement("span");
-  currentDate.classList.add("text-red-500");
-  currentDate.textContent = getDate();
-  timeDiv.appendChild(currentDate);
+  if (taskType === "pending") {
+    let currentTimenDate = document.createElement("span");
+    currentTimenDate.classList.add("text-red-500");
+    currentTimenDate.textContent = taskTimenDate.createdAt;
+    timeDiv.appendChild(currentTimenDate);
+  } else if (taskType === "ongoing") {
+    let currentTimenDate = document.createElement("span");
+    currentTimenDate.classList.add("text-red-500");
+    currentTimenDate.textContent = taskTimenDate.createdAt;
+    timeDiv.appendChild(currentTimenDate);
+    currentTimenDate = document.createElement("span");
+    currentTimenDate.classList.add("text-yellow-500");
+    currentTimenDate.textContent = taskTimenDate.progressAt;
+    timeDiv.appendChild(currentTimenDate);
+  } else {
+    let currentTimenDate = document.createElement("span");
+    currentTimenDate.classList.add("text-red-500");
+    currentTimenDate.textContent = taskTimenDate.createdAt;
+    timeDiv.appendChild(currentTimenDate);
+    currentTimenDate = document.createElement("span");
+    currentTimenDate.classList.add("text-yellow-500");
+    currentTimenDate.textContent = taskTimenDate.progressAt;
+    timeDiv.appendChild(currentTimenDate);
+    currentTimenDate = document.createElement("span");
+    currentTimenDate.classList.add("text-green-500");
+    currentTimenDate.textContent = taskTimenDate.finishedAt;
+    timeDiv.appendChild(currentTimenDate);
+  }
 
   const taskNameSpan = document.createElement("span");
   taskNameSpan.classList.add("w-[90%]", "break-words");
