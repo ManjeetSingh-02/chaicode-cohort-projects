@@ -47,38 +47,17 @@ function loadTask(task) {
 
 function addTask(taskName, taskType, taskTimenDate) {
   const mainDiv = document.createElement("div");
-  mainDiv.classList.add("border-2", "w-full", "rounded-lg", "p-4", "font-bold", "flex", "flex-col", "items-center", "justify-center", "gap-4");
+  mainDiv.classList.add("border-2", "w-full", "rounded-lg", "p-4", "font-bold", "flex", "flex-col", "items-center", "justify-center", "gap-4", "cursor-move");
+  mainDiv.setAttribute("taskType", taskType);
+  mainDiv.setAttribute("draggable", true);
+  mainDiv.addEventListener("dragstart", () => mainDiv.setAttribute("dragging", true));
+  mainDiv.addEventListener("dragend", () => mainDiv.removeAttribute("dragging"));
 
   const timeDiv = document.createElement("div");
-  timeDiv.classList.add("border-b-2", "border-gray-500", "w-full", "text-center", "flex", "flex-col", "items-center", "justify-center", "gap-1", "pb-1");
-  if (taskType === "pending") {
-    let currentTimenDate = document.createElement("span");
-    currentTimenDate.classList.add("text-red-500");
-    currentTimenDate.textContent = taskTimenDate.createdAt;
-    timeDiv.appendChild(currentTimenDate);
-  } else if (taskType === "ongoing") {
-    let currentTimenDate = document.createElement("span");
-    currentTimenDate.classList.add("text-red-500");
-    currentTimenDate.textContent = taskTimenDate.createdAt;
-    timeDiv.appendChild(currentTimenDate);
-    currentTimenDate = document.createElement("span");
-    currentTimenDate.classList.add("text-yellow-500");
-    currentTimenDate.textContent = taskTimenDate.progressAt;
-    timeDiv.appendChild(currentTimenDate);
-  } else {
-    let currentTimenDate = document.createElement("span");
-    currentTimenDate.classList.add("text-red-500");
-    currentTimenDate.textContent = taskTimenDate.createdAt;
-    timeDiv.appendChild(currentTimenDate);
-    currentTimenDate = document.createElement("span");
-    currentTimenDate.classList.add("text-yellow-500");
-    currentTimenDate.textContent = taskTimenDate.progressAt;
-    timeDiv.appendChild(currentTimenDate);
-    currentTimenDate = document.createElement("span");
-    currentTimenDate.classList.add("text-green-500");
-    currentTimenDate.textContent = taskTimenDate.finishedAt;
-    timeDiv.appendChild(currentTimenDate);
-  }
+  timeDiv.classList.add("border-b-2", "border-gray-500", "w-full", "text-center", "pb-1");
+  const currentTimenDate = document.createElement("span");
+  currentTimenDate.textContent = taskTimenDate;
+  timeDiv.appendChild(currentTimenDate);
 
   const taskNameSpan = document.createElement("span");
   taskNameSpan.classList.add("w-[90%]", "break-words");
@@ -93,7 +72,7 @@ function addTask(taskName, taskType, taskTimenDate) {
   editButton.appendChild(editButtonImg);
   editButton.addEventListener("click", () => {
     taskNameSpan.setAttribute("editing", true);
-    taskNameSpan.setAttribute("type", taskType);
+    taskNameSpan.setAttribute("editingType", mainDiv.getAttribute("taskType"));
     togglePopup("editPopup", true);
   });
   buttonsDiv.appendChild(editButton);
@@ -131,4 +110,4 @@ function addTask(taskName, taskType, taskTimenDate) {
   else finishedTasksDiv.appendChild(mainDiv);
 }
 
-export { saveTasks, checkTasks, addTask, updateBoardCount, pendingTasks, ongoingTasks, finishedTasks };
+export { saveTasks, checkTasks, addTask, updateBoardCount, pendingTasks, ongoingTasks, finishedTasks, pendingTasksDiv, ongoingTasksDiv, finishedTasksDiv };
