@@ -82,10 +82,10 @@ function addTask(taskName, taskType, taskTimenDate) {
   const deleteButtonImg = getImage("./icons/icons8-delete.svg", 20, 20, "Delete");
   deleteButton.appendChild(deleteButtonImg);
   deleteButton.addEventListener("click", () => {
-    if (taskType === "pending") {
+    if (mainDiv.getAttribute("taskType") === "pending") {
       pendingTasks = pendingTasks.filter((task) => task.taskName !== taskNameSpan.textContent);
       saveTasks("kbc-pending-tasks", pendingTasks);
-    } else if (taskType === "ongoing") {
+    } else if (mainDiv.getAttribute("taskType") === "ongoing") {
       ongoingTasks = ongoingTasks.filter((task) => task.taskName !== taskNameSpan.textContent);
       saveTasks("kbc-ongoing-tasks", ongoingTasks);
     } else {
