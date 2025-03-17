@@ -6,9 +6,9 @@ To view all the challenges, visit this site - [**Click Here**](https://manjeetsi
 
 List of all the challenges
 
-- Projects
+- MasterJi Challanges
 
-  - [MasterJi Challanges](./MasterJi/)
+  - [Daily Mood Tracker](https://github.com/ManjeetSingh-02/masterji-daily-mood-tracker)
 
 - CSS Challenges
 
