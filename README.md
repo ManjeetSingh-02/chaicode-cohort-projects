@@ -8,7 +8,7 @@ List of all the challenges
 
 - Projects
 
-  -[MasterJi Challanges](./MasterJi/)
+  - [MasterJi Challanges](./MasterJi/)
 
 - CSS Challenges
 
