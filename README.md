@@ -6,6 +6,10 @@ To view all the challenges, visit this site - [**Click Here**](https://manjeetsi
 
 List of all the challenges
 
+- Projects
+
+  -[MasterJi Challanges](./MasterJi/)
+
 - CSS Challenges
 
   - [Hero Section Challenges](./CSS/Hero/)
