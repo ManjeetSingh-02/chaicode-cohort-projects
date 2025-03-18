@@ -9,6 +9,7 @@ List of all the challenges
 - MasterJi Challanges
 
   - [Daily Mood Tracker](https://github.com/ManjeetSingh-02/masterji-daily-mood-tracker)
+  - [YouTube Style Video Listing](https://github.com/ManjeetSingh-02/masterji-youtube-style-video-listing)
 
 - CSS Challenges
 
