@@ -10,6 +10,7 @@ List of all the challenges
 
   - [Daily Mood Tracker](https://github.com/ManjeetSingh-02/masterji-daily-mood-tracker)
   - [YouTube Style Video Listing](https://github.com/ManjeetSingh-02/masterji-youtube-style-video-listing)
+  - [Random Quote Generator](https://github.com/ManjeetSingh-02/masterji-random-quote-generator)
 
 - CSS Challenges
 
