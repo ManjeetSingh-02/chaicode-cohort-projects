@@ -12,6 +12,7 @@ List of all the challenges
   - [YouTube Style Video Listing](https://github.com/ManjeetSingh-02/masterji-youtube-style-video-listing)
   - [Random Quote Generator](https://github.com/ManjeetSingh-02/masterji-random-quote-generator)
   - [Book Library](https://github.com/ManjeetSingh-02/masterji-book-library)
+  - [Markdown Previewer](https://github.com/ManjeetSingh-02/masterji-markdown-previewer)
 
 - CSS Challenges
 
